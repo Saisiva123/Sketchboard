@@ -17,8 +17,10 @@ npm run dev
 
 And edit the nginx.conf file as below
 
+
+```
 http {
-  server {
+    server {
         listen 8080;
 
         location / {
@@ -36,4 +38,6 @@ http {
             proxy_set_header X-Forwarded-Proto $scheme;
         }
     }
-  }
+}
+
+```
