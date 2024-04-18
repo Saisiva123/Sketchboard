@@ -15,9 +15,9 @@ import {
 } from "@mui/material";
 import { Logout, PersonAdd, Settings } from "@mui/icons-material";
 import logo from "../../public/logo.png";
-import React, { useEffect, useState } from "react";
+import React, { Suspense, useState } from "react";
 import Image from "next/image";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import Cookies from "js-cookie";
 import '@/app/globals.css';
 import { SnackbarProvider } from "@/utils/snackbar.provider";
@@ -33,7 +33,6 @@ const HomeLayout: React.FC<any> = ({ children }: { isShared: boolean, children: 
 
     const [connectedUsers, setConnectedUsers] = useState<any>();
     const [showBadge, setShowBadge] = useState<boolean>(true)
-    const searchParams = useSearchParams();
     const [popupOpen, setPopupOpen] = useState<boolean>(false);
 
     const handleClick = (event: React.MouseEvent<HTMLElement>) => {
@@ -237,7 +236,8 @@ const HomeLayout: React.FC<any> = ({ children }: { isShared: boolean, children: 
 
 
                 </Modal>
-                <div className="body px-3"> {children} </div>
+                <Suspense> <div className="body px-3"> {children} </div></Suspense>
+               
             </div>
         </SnackbarProvider>
     )
