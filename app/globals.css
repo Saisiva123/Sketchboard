@@ -1,0 +1,269 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;700;&display=swap");
+@import url("tldraw/tldraw.css");
+
+
+/* Authentication Page Designs */
+
+.login {
+  width: 50%;
+  margin: 10% auto;
+}
+
+.login span {
+  color: #0e89b2;
+}
+
+.MuiButton-root:hover {
+  background-color: black;
+}
+
+.divider::before {
+  content: '';
+  width: 1px;
+  height: 65px;
+  background-color: lightgray;
+  display: block;
+  position: absolute;
+  bottom: 29px;
+  left: 48%;
+}
+
+.divider::after {
+  content: '';
+  width: 1px;
+  height: 65px;
+  background-color: lightgray;
+  display: block;
+  position: absolute;
+  top: 32px;
+  left: 48%;
+}
+
+.OauthProviders>.provider {
+  border: 1.3px solid black;
+  border-radius: 2px;
+}
+
+/* Home Page Desgins */
+
+.home .logo {
+  width: 100px;
+}
+
+.home input[type="text"] {
+  outline: none;
+  border: none;
+  width: 300px;
+  border-radius: 15px;
+  background-color: #f8f7f7;
+  padding: 6px 10px 6px 37px;
+  font-size: 13px;
+  position: relative;
+}
+
+.header {
+  border-bottom: 1px solid rgb(238, 235, 235);
+}
+
+.body {
+  width: 100%;
+  height: calc(100vh - 53px);
+  position: relative;
+  display: table;
+}
+
+.board {
+  height: calc(100vh - 53px);
+  z-index: 0;
+}
+
+.mainChat {
+  height: calc(100vh - 100px);
+  overflow: scroll;
+  z-index: 0;
+}
+
+.connectedUsers {
+  top: 10px;
+  right: 10px;
+  z-index: 1;
+  background-color: rgb(244 242 242 / 59%);
+  border-radius: 10px;
+  padding: 10px;
+}
+
+.chatInput>input[type="text"] {
+  padding: 6px 10px 6px 10px;
+  width: 100%;
+  background: #ececec !important;
+  border-radius: 9px !important;
+}
+
+.aiSuggestion {
+  clear: both;
+  width: 100%;
+  background: #eedebf;
+  border: 2px solid #e1c184;
+  color: #b77903;
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+
+.aiResponse {
+  clear: both;
+  max-width: 77%;
+  width: fit-content;
+  background: #e2e7e9;
+  /* border: 2px solid #bcbcbc; */
+  border-radius: 10px;
+  padding: 7px 10px;
+}
+
+.fromUser {
+  float: right;
+  clear: both;
+  max-width: 77%;
+  width: fit-content;
+  background: #e5ecea;
+  padding: 7px 10px;
+  border-radius: 10px;
+}
+
+.aiResponse {
+  /* background: #e8e6e6;   */
+}
+
+.aiSuggestion {}
+
+.search::before {
+  content: url("../public/search.png");
+  position: absolute;
+  width: 10px;
+  font-size: 10px;
+  scale: 0.018;
+  top: 0;
+  bottom: 15px;
+  left: 8px;
+  z-index: 1;
+}
+
+.profilePic {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-image: url("../public/profilePic.png");
+  background-size: 102% 85%;
+  background-repeat: no-repeat;
+}
+
+.profileIconBtn,
+.notificationIconBtn {
+  padding: 0 !important;
+  margin: 0 !important;
+}
+
+.thumbnail {
+  width: 170px;
+  height: 210px;
+  border-radius: 5px;
+  border: 0.3px solid grey !important;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.thumbnail:hover {
+  box-shadow: 0px 0px 3px gray;
+}
+
+.description {
+  background-color: rgb(69 74 83);
+  line-height: 43px;
+}
+
+.btns {
+  position: absolute;
+  left: 53%;
+  top: 0;
+}
+
+.btns button:first-child {
+  padding: 0px 10px !important;
+}
+
+.btns button {
+  padding: 1px 10px !important;
+  font-size: 13px;
+  text-transform: capitalize;
+}
+
+.MuiBadge-badge {
+  font-size: 12px;
+  background-color: #f45a5a !important;
+}
+
+.loading {
+  color: transparent;
+  width: 104px;
+  height: 43px;
+  left: -30px;
+  position: relative;
+  clear: both;
+}
+
+.generateWithAI {
+  background-image: url('../public/generate_ai.png');
+  width: 40px;
+  height: 32px;
+  background-size: 97% 92%;
+  background-position: 1px 2px;
+  border-radius: 10px;
+}
+
+.botlandingPage
+{
+  bottom: 20px
+}
+
+.botlandingPage > img {
+  width: 50%;
+  margin: 0 auto;
+}
+
+
+.botTips {
+  border: 1px solid lightgray;
+  border-radius: 10px;
+}
+.botTips > h3 {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.botTips > p {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.accountSelection 
+{
+  width: 300px;
+  margin: 0 auto;
+  position: relative;
+  top: 30%;
+  background-color: white;
+}
+
+.readOnly {
+  position: absolute;
+  top: 6px;
+  left: 28%;
+  z-index: 1;
+}
+
+.readOnly p {
+  font-size: 12px;
+}

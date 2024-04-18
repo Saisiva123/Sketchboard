@@ -1,0 +1,44 @@
+{
+  "name": "smartsketch",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.5",
+    "@liveblocks/client": "^1.11.1",
+    "@liveblocks/react": "^1.11.1",
+    "@mui/icons-material": "^5.15.15",
+    "@mui/material": "^5.15.15",
+    "@tldraw/tldraw": "^1.2.2",
+    "@heroicons/react": "2.0.17",
+    "ai": "^3.0.19",
+    "axios": "^1.6.8",
+    "js-cookie": "^3.0.5",
+    "lodash": "^4.17.21",
+    "next": "14.1.4",
+    "openai": "^4.33.0",
+    "react": "^18",
+    "react-dom": "^18",
+    "socket.io-client": "^4.7.5",
+    "tldraw": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/lodash": "^4.17.0",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}
