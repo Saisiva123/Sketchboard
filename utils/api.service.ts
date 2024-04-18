@@ -3,7 +3,7 @@ import Cookies from 'js-cookie';
 import Router from 'next/router';
 
 const API = axios.create({
-  baseURL: `http://sketchai.saimannem.com/api/`,
+  baseURL: `https://sketchai.saimannem.com/api/`,
   headers: {
     'Content-Type': 'application/json'
   }
