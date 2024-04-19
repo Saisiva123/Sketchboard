@@ -5,7 +5,7 @@ import { StreamingTextResponse } from "ai";
 import { NextRequest } from 'next/server';
 import { AiInstructionPrompt } from '@/utils/prompt';
 
-const openAi = new OpenAI({ apiKey: "sk-proj-xYFxSAAr91UyO5lXKYxBT3BlbkFJKLj5r7JBDrXwEISCBRmi" });
+const openAi = new OpenAI({ apiKey: process.env.NEXT_PUBLIC_OPEN_API_KEY });
 
 export async function POST(request: NextRequest) {
     const body = await request.json();
