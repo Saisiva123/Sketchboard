@@ -7,7 +7,10 @@ const nextConfig = {
             destination: '/'
           }
         ];
-      }
+      },
+    env: {
+        NEXT_API_URL: 'https://sketchai.saimannem.com/api'
+    }
 };
 
 export default nextConfig;
