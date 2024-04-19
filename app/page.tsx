@@ -25,15 +25,20 @@ const MuiTextfieldStylings = {
     }
 };
 
-
-const Login = () => {
+const Login = (props: any) => {
     const router = useRouter();
-    const public_api_url = process.env.NEXT_PUBLIC_API_URL;
-    console.log(public_api_url)
+    const [publicApiUrl,  setPublicApiURL] = useState<any>();
 
     useEffect(() => {
         router.replace('/login');
     }, [router])
+
+
+    useEffect(() => {
+        console.log(process.env.NEXT_PUBLIC_API_URL)
+        setPublicApiURL(process.env.NEXT_PUBLIC_API_URL)
+
+    }, [])
 
 
     const addSnackbar = useSnackbar();
@@ -124,8 +129,8 @@ const Login = () => {
     }
 
     const loginWithOAuth = (type: 'google' | 'github') => {
-        console.log(public_api_url)
-        window.open(`${public_api_url}/auth/${type}/callback`, '_self')
+        console.log(publicApiUrl)
+        window.open(`${publicApiUrl}/auth/${type}/callback`, '_self')
     }
 
     return (
