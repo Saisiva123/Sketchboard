@@ -74,7 +74,7 @@ const Login = () => {
         if (!user.email || !user.password) {
             setFormValid(false)
         }
-        API.post('/auth/login', { email: user.email, password: user.password }).then((res: any) => {
+        API.post('https://sketchai.saimannem.com/api/auth/login', { email: user.email, password: user.password }).then((res: any) => {
             if (res.data.message == 'Login Successful') {
                 router.push("/home");
                 addSnackbar({
