@@ -28,6 +28,8 @@ const MuiTextfieldStylings = {
 
 const Login = () => {
     const router = useRouter();
+    const public_api_url = process.env.NEXT_PUBLIC_API_URL;
+    console.log(public_api_url)
 
     useEffect(() => {
         router.replace('/login');
@@ -122,9 +124,8 @@ const Login = () => {
     }
 
     const loginWithOAuth = (type: 'google' | 'github') => {
-        let url = process.env.NEXT_PUBLIC_API_URL;
-        console.log(url)
-        window.open(`${url}/auth/${type}/callback`, '_self')
+        console.log(public_api_url)
+        window.open(`${public_api_url}/auth/${type}/callback`, '_self')
     }
 
     return (
