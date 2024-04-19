@@ -122,7 +122,7 @@ const Login = () => {
     }
 
     const loginWithOAuth = (type: 'google' | 'github') => {
-        window.open(`/api/auth/${type}/callback`, '_self')
+        window.open(`${process.env.NEXT_PUBLIC_API_URL}/auth/${type}/callback`, '_self')
     }
 
     return (
