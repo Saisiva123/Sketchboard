@@ -52,7 +52,7 @@ const TldrawBoard: React.FC<any> = ({ id, state, shapesToAdd, setEditorInstance,
     const ref = useRef(null);
 
     // socket details
-    const SERVER_URL = "wss://sketchAI.saimannem.com";
+    const SERVER_URL = "wss://sketchai.saimannem.com";
     const username = Cookies.get('email') || ''
     const [socket, setSocket] = useState<any>();
 
