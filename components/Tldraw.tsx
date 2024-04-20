@@ -73,7 +73,7 @@ const TldrawBoard: React.FC<any> = ({ id, state, shapesToAdd, setEditorInstance,
         function connectTOSocket() {
             const socket = io(SERVER_URL, {
                 transports : ['websocket'],
-                path: '/socket.io',
+                path: '/api/socket.io',
                 query: {
                     roomId: id,
                     username: Cookies.get('email')
